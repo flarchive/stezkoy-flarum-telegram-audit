@@ -1,0 +1,39 @@
+{
+  "name": "stezkoy/flarum-telegram-audit",
+  "type": "flarum-extension",
+  "description": "Telegram audit notifications for Flarum: new users, email confirmations, flagged discussions",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Stezkoy",
+      "email": "stezko@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/Stezkoy/flarum-telegram-audit",
+    "issues": "https://github.com/Stezkoy/flarum-telegram-audit/issues"
+  },
+  "require": {
+    "flarum/core": "^2.0",
+    "flarum/flags": "^2.0",
+    "php": "^8.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stezkoy\\FlarumTelegramAudit\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Telegram Audit",
+      "category": "feature",
+      "icon": {
+        "name": "fa-solid fa-shield-halved",
+        "backgroundColor": "#26A5E4",
+        "color": "#fff"
+      }
+    }
+  }
+}
