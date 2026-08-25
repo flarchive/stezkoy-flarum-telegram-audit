@@ -1,0 +1,67 @@
+stezkoy-telegram-audit:
+  admin:
+    connection_heading: Telegram
+    connection_intro: Configure the connection to the Telegram bot.
+    bot_token_label: Bot Token
+    bot_token_help: "Token from @BotFather"
+    chat_id_label: Chat ID
+    chat_id_help: "-1001234567890 for groups/channels, @username for public channels"
+    use_topic_switch: Topic mode
+    use_topic_help: Enable to send messages to a specific topic in a forum group
+    topic_id_label: Topic ID
+    topic_id_help: Topic ID from the forum group
+    use_proxy_switch: Use proxy
+    use_proxy_help: Enable if api.telegram.org is not accessible from your server (requires cURL)
+    proxy_label: Proxy
+    proxy_help: "socks5://127.0.0.1:1080"
+    test_button: Send test message
+    test_ok: Test message sent — check Telegram
+    test_failed: Failed to send the request
+
+    features_heading: Notifications
+    features_intro: Choose which events to send to Telegram. All notifications are disabled by default.
+    features_users: Users
+    features_moderation: Moderation
+
+    notify_on_register_label: New user registration
+    notify_on_register_help: Sends a notification when a new user creates an account
+    notify_on_email_confirmed_label: Email confirmed
+    notify_on_email_confirmed_help: Sends a notification when a user confirms their email address
+    notify_on_user_suspended_label: User suspended
+    notify_on_user_suspended_help: Sends a notification when a user account is suspended
+    notify_on_user_unsuspended_label: User unsuspended
+    notify_on_user_unsuspended_help: Sends a notification when a suspended user is restored
+    notify_on_user_deleted_label: User deleted
+    notify_on_user_deleted_help: Sends a notification when a user account is permanently deleted
+    notify_on_user_gdpr_erased_label: GDPR erasure
+    notify_on_user_gdpr_erased_help: Sends a notification when a user is anonymized or deleted via GDPR (requires flarum/gdpr)
+    notify_on_flag_label: Discussion flagged
+    notify_on_flag_help: Sends a notification when a discussion receives a flag (report)
+    notify_on_flag_deleted_label: Flag dismissed
+    notify_on_flag_deleted_help: Sends a notification when a flag is removed by a moderator
+    notify_on_discussion_renamed_label: Discussion renamed
+    notify_on_discussion_renamed_help: Sends a notification when a discussion title is changed
+    notify_on_discussion_locked_label: Discussion hidden
+    notify_on_discussion_locked_help: Sends a notification when a discussion is hidden (removed from listing)
+    notify_on_discussion_unlocked_label: Discussion restored
+    notify_on_discussion_unlocked_help: Sends a notification when a hidden discussion is restored
+    notify_on_discussion_deleted_label: Discussion permanently deleted
+    notify_on_discussion_deleted_help: Sends a notification when a discussion is permanently deleted
+
+    test_message: "Test notification from Telegram Audit\n{username}\nIf you see this message, your connection is working correctly."
+
+  messages:
+    user_registered: "New user: <a href=\"{profile_url}\">{username}</a>\nEmail: {email}"
+    email_confirmed: "Email confirmed: <a href=\"{profile_url}\">{username}</a>\nEmail: {email}"
+    user_suspended: "User suspended: <a href=\"{profile_url}\">{username}</a>"
+    user_unsuspended: "User unsuspended: <a href=\"{profile_url}\">{username}</a>"
+    user_deleted: "User deleted: {username}"
+    user_gdpr_anonymized: "User anonymized (GDPR): {username}"
+    user_gdpr_deleted: "User deleted (GDPR): {username}"
+    discussion_flagged: "Discussion flagged: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    reply_flagged: "Reply flagged in: <a href=\"{post_url}\">{discussion_title}</a> (#{post_number})"
+    flag_deleted: "Flag dismissed: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_renamed: "Discussion renamed: <a href=\"{discussion_url}\">{old_title}</a> -> {new_title}"
+    discussion_locked: "Discussion hidden: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_unlocked: "Discussion restored: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_permanently_deleted: "Discussion permanently deleted: {discussion_title}"

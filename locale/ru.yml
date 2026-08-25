@@ -1,0 +1,67 @@
+stezkoy-telegram-audit:
+  admin:
+    connection_heading: Telegram
+    connection_intro: Настройте подключение к Telegram-боту.
+    bot_token_label: Токен бота
+    bot_token_help: "Токен от @BotFather"
+    chat_id_label: ID чата
+    chat_id_help: "-1001234567890 для групп/каналов, @username для публичных каналов"
+    use_topic_switch: Режим топиков
+    use_topic_help: Включите, чтобы отправлять сообщения в конкретный топик форума
+    topic_id_label: ID топика
+    topic_id_help: ID топика в группе-форуме
+    use_proxy_switch: Использовать прокси
+    use_proxy_help: Включите, если api.telegram.org недоступен с вашего сервера (требуется cURL)
+    proxy_label: Прокси
+    proxy_help: "socks5://127.0.0.1:1080"
+    test_button: Отправить тестовое сообщение
+    test_ok: Тестовое сообщение отправлено, проверьте Telegram
+    test_failed: Не удалось отправить запрос
+
+    features_heading: Уведомления
+    features_intro: Выберите, какие события отправлять в Telegram. Все уведомления отключены по умолчанию.
+    features_users: Пользователи
+    features_moderation: Модерация
+
+    notify_on_register_label: Регистрация нового пользователя
+    notify_on_register_help: Отправляет уведомление, когда новый пользователь создаёт аккаунт
+    notify_on_email_confirmed_label: Подтверждение email
+    notify_on_email_confirmed_help: Отправляет уведомление, когда пользователь подтверждает свой email
+    notify_on_user_suspended_label: Пользователь заблокирован
+    notify_on_user_suspended_help: Отправляет уведомление, когда аккаунт пользователя заблокирован
+    notify_on_user_unsuspended_label: Пользователь разблокирован
+    notify_on_user_unsuspended_help: Отправляет уведомление, когда заблокированный пользователь восстановлен
+    notify_on_user_deleted_label: Пользователь удалён
+    notify_on_user_deleted_help: Отправляет уведомление, когда аккаунт пользователя удалён навсегда
+    notify_on_user_gdpr_erased_label: GDPR-удаление
+    notify_on_user_gdpr_erased_help: Отправляет уведомление, когда пользователь анонимизирован или удалён через GDPR (требуется flarum/gdpr)
+    notify_on_flag_label: Жалоба на тему
+    notify_on_flag_help: Отправляет уведомление, когда на тему поступает жалоба
+    notify_on_flag_deleted_label: Жалоба снята
+    notify_on_flag_deleted_help: Отправляет уведомление, когда модератор снимает жалобу
+    notify_on_discussion_renamed_label: Тема переименована
+    notify_on_discussion_renamed_help: Отправляет уведомление, когда заголовок темы изменён
+    notify_on_discussion_locked_label: Тема удалена
+    notify_on_discussion_locked_help: Отправляет уведомление, когда тема скрыта (удалена из списка)
+    notify_on_discussion_unlocked_label: Тема восстановлена
+    notify_on_discussion_unlocked_help: Отправляет уведомление, когда скрытая тема восстановлена
+    notify_on_discussion_deleted_label: Тема полностью удалена
+    notify_on_discussion_deleted_help: Отправляет уведомление, когда тема удалена безвозвратно
+
+    test_message: "Тестовое уведомление от Telegram Audit\n{username}\nЕсли вы видите это сообщение, подключение работает корректно."
+
+  messages:
+    user_registered: "Новый пользователь: <a href=\"{profile_url}\">{username}</a>\nEmail: {email}"
+    email_confirmed: "Email подтверждён: <a href=\"{profile_url}\">{username}</a>\nEmail: {email}"
+    user_suspended: "Пользователь заблокирован: <a href=\"{profile_url}\">{username}</a>"
+    user_unsuspended: "Пользователь разблокирован: <a href=\"{profile_url}\">{username}</a>"
+    user_deleted: "Пользователь удалён: {username}"
+    user_gdpr_anonymized: "Пользователь анонимизирован (GDPR): {username}"
+    user_gdpr_deleted: "Пользователь удалён (GDPR): {username}"
+    discussion_flagged: "Жалоба на тему: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    reply_flagged: "Жалоба на ответ в: <a href=\"{post_url}\">{discussion_title}</a> (#{post_number})"
+    flag_deleted: "Жалоба снята: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_renamed: "Тема переименована: <a href=\"{discussion_url}\">{old_title}</a> -> {new_title}"
+    discussion_locked: "Тема удалена: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_unlocked: "Тема восстановлена: <a href=\"{discussion_url}\">{discussion_title}</a>"
+    discussion_permanently_deleted: "Тема полностью удалена: {discussion_title}"
